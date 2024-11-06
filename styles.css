@@ -1,0 +1,99 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary-text);
+}
+
+main {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+/* Light mode theme */
+:root {
+    --background-color: #ffffff;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --button-background: #f0f0f0;
+    --button-text: #333333;
+    --button-hover: #ddd;
+}
+
+/* Dark mode theme */
+body.dark-mode {
+    --background-color: #181818;
+    --primary-text: #ffffff;
+    --secondary-text: #bbbbbb;
+    --button-background: #333333;
+    --button-text: #ffffff;
+    --button-hover: #444444;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-text);
+}
+
+.toggle-btn {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: 1px solid var(--button-text);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Simple responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .toggle-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    main {
+        font-size: 1rem;
+    }
+}
